@@ -21,9 +21,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-/*import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.common.api.GoogleApiClient;*/
+import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.io.UnsupportedEncodingException;
 
@@ -62,12 +62,7 @@ public class Activity_BTLE_Services extends AppCompatActivity{
             mBTLE_Service.connect(address);
             mBTLE_Service.enableTXNotification();
 
-            // Automatically connects to the device upon successful start-up initialization.
-//            mBTLeService.connect(mBTLeDeviceAddress);
-
-//            mBluetoothGatt = mBTLeService.getmBluetoothGatt();
-//            mGattUpdateReceiver.setBluetoothGatt(mBluetoothGatt);
-//            mGattUpdateReceiver.setBTLeService(mBTLeService);
+ 
         }
 
         @Override
@@ -75,9 +70,6 @@ public class Activity_BTLE_Services extends AppCompatActivity{
             mBTLE_Service = null;
             mBTLE_Service_Bound = false;
             Log.d(TAG, "onServiceDisconnected");
-//            mBluetoothGatt = null;
-//            mGattUpdateReceiver.setBluetoothGatt(null);
-//            mGattUpdateReceiver.setBTLeService(null);
         }
     };
     private BroadcastReceiver_BTLE_GATT mGattUpdateReceiver = new BroadcastReceiver_BTLE_GATT(this) {
@@ -130,6 +122,7 @@ public class Activity_BTLE_Services extends AppCompatActivity{
 
                 weightTV.setText(weightText);
             }
+           //String str= responseData.toString();
 
 
         }

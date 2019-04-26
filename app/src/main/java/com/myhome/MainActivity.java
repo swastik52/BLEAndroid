@@ -31,7 +31,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static final int REQUEST_ENABLE_BT = 2;
     public static final int BTLE_SERVICES = 2;
-    private static final int PERMS_REQUEST_CODE = 123;
     private static final int ASK_MULTIPLE_PERMISSION_REQUEST_CODE = 123;
 
     private HashMap<String, BTLE_Device> mBTDevicesHashMap;
